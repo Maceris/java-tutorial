@@ -26,6 +26,21 @@ public class Variables {
 	public int integer = 1;
 
 	/**
+	 * A hexadecimal number.
+	 */
+	public int hex = 0x123;
+
+	/**
+	 * An octal number, starting with 0 indicates base 8.
+	 */
+	public int octal = 0127;
+
+	/**
+	 * A binary number.
+	 */
+	public int binary = 0b1011;
+
+	/**
 	 * Stores integer values between {@value Long#MIN_VALUE} and
 	 * {@value Long#MAX_VALUE}.
 	 */
@@ -43,6 +58,11 @@ public class Variables {
 	 * 15 digits.
 	 */
 	public double longDecimal = 3.14159d;
+
+	/**
+	 * A double in scientific notation.
+	 */
+	public double scientificNotation = 1.234e2;
 
 	/**
 	 * Stores true or false values.
