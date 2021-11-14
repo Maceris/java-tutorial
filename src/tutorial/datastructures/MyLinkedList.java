@@ -162,7 +162,7 @@ public class MyLinkedList implements List<Integer> {
 	@Override
 	public boolean remove(Object o) {
 		if (null == o) {
-			throw new NullPointerException();
+			return false;
 		}
 		if (o instanceof Integer) {
 			if (!contains(o)) {
