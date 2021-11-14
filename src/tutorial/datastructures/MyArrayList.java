@@ -21,6 +21,10 @@ public class MyArrayList implements List<String> {
 	 */
 	String[] contents;
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 */
 	@Override
 	public void add(int index, String element) {
 		// TODO fill this out
@@ -59,6 +63,10 @@ public class MyArrayList implements List<String> {
 		return c.stream().allMatch(this::contains);
 	}
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 */
 	@Override
 	public String get(int index) {
 		// TODO fill this out
@@ -109,11 +117,19 @@ public class MyArrayList implements List<String> {
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 */
 	@Override
 	public ListIterator<String> listIterator(int index) {
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 */
 	@Override
 	public String remove(int index) {
 		// TODO fill this out
@@ -136,6 +152,10 @@ public class MyArrayList implements List<String> {
 		throw new UnsupportedOperationException();
 	}
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 */
 	@Override
 	public String set(int index, String element) {
 		// TODO fill this out
