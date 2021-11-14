@@ -153,10 +153,26 @@ public class MyLinkedList implements List<Integer> {
 		return null;
 	}
 
+	/**
+	 * @throws IndexOutOfBoundsException if the index is out of range
+	 *             (<tt>index &lt; 0 || index &gt; size()</tt>)
+	 * @throws NullPointerException if the specified element is null and this
+	 *             list does not permit null elements
+	 */
 	@Override
 	public boolean remove(Object o) {
-		// TODO fill this out
-		return false;
+		if (null == o) {
+			throw new NullPointerException();
+		}
+		if (o instanceof Integer) {
+			if (!contains(o)) {
+				return false;
+			}
+			int index = indexOf(o);
+			remove(index);
+			return true;
+		}
+		throw new UnsupportedOperationException();
 	}
 
 	@Override
