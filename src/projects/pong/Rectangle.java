@@ -11,7 +11,7 @@ public class Rectangle {
 	 * @param r2 The second rectangle.
 	 * @return True if the rectangles overlap, false if they do not.
 	 */
-	public static boolean collides(Rectangle r1, Rectangle r2) {
+	public static boolean overlap(Rectangle r1, Rectangle r2) {
 		return r1.x < r2.x + r2.width && r1.x + r1.width > r2.x
 			&& r1.y < r2.y + r2.height && r1.y + r1.height > r2.y;
 	}
@@ -33,15 +33,15 @@ public class Rectangle {
 	 *
 	 * @param x The x location of the top left corner.
 	 * @param y The y location of the top left corner.
-	 * @param width The width of the rectangle.
-	 * @param height The height of the rectangle.
+	 * @param width The width of the rectangle. If <= 0, considered 0.
+	 * @param height The height of the rectangle. If <= 0, considered 0.
 	 */
 	public Rectangle(final int x, final int y, final int width,
 		final int height) {
 		this.x = x;
 		this.y = y;
-		this.width = width;
-		this.height = height;
+		this.setWidth(width);
+		this.setHeight(height);
 	}
 
 	/**
@@ -60,16 +60,6 @@ public class Rectangle {
 	 */
 	public void addY(int delta) {
 		this.y += delta;
-	}
-
-	/**
-	 * Checks if this rectangle intersects with another.
-	 *
-	 * @param other The other rectangle.
-	 * @return True if the rectangles overlap, false if they do not.
-	 */
-	public boolean collidesWith(Rectangle other) {
-		return Rectangle.collides(this, other);
 	}
 
 	/**
@@ -112,10 +102,27 @@ public class Rectangle {
 	}
 
 	/**
+	 * Checks if this rectangle intersects with another.
+	 *
+	 * @param other The other rectangle.
+	 * @return True if the rectangles overlap, false if they do not.
+	 */
+	public boolean overlapsWith(Rectangle other) {
+		return Rectangle.overlap(this, other);
+	}
+
+	/**
+	 * Sets the height of the rectangle. Anything <= 0 will be considered 0.
+	 *
 	 * @param height the height to set
 	 */
 	public void setHeight(int height) {
-		this.height = height;
+		if (height <= 0) {
+			this.height = 0;
+		}
+		else {
+			this.height = height;
+		}
 	}
 
 	/**
@@ -130,21 +137,27 @@ public class Rectangle {
 	}
 
 	/**
-	 * Set the new size of the rectangle.
+	 * Set the new size of the rectangle. If either are <= 0, they are
+	 * considered 0.
 	 *
 	 * @param newWidth The new width.
 	 * @param newHeight The new height.
 	 */
 	public void setSize(int newWidth, int newHeight) {
-		this.width = newWidth;
-		this.height = newHeight;
+		this.setWidth(newWidth);
+		this.setHeight(newHeight);
 	}
 
 	/**
 	 * @param width the width to set
 	 */
 	public void setWidth(int width) {
-		this.width = width;
+		if (width <= 0) {
+			this.width = 0;
+		}
+		else {
+			this.width = width;
+		}
 	}
 
 	/**
