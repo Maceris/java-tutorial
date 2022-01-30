@@ -41,16 +41,6 @@ public class Loops {
 	}
 
 	/**
-	 * A main method to test the code.
-	 *
-	 * @param args Arguments, ignored.
-	 */
-	public static void main(String[] args) {
-		// You can run your methods here to test them
-		Loops.fizbuzz();
-	}
-
-	/**
 	 * <p>
 	 * Using System.out.println(), and a loop this should output the lyrics to
 	 * the song "99 bottles of beer on the wall".
