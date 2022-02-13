@@ -41,6 +41,17 @@ public class Loops {
 	}
 
 	/**
+	 * Returns the largest of all the provided values. If no numbers are
+	 * provided, returns 0.
+	 *
+	 * @param numbers The provided numbers
+	 * @return The largest of all the provided numbers.
+	 */
+	public static int max(int... numbers) {
+		return -1;
+	}
+
+	/**
 	 * <p>
 	 * Using System.out.println(), and a loop this should output the lyrics to
 	 * the song "99 bottles of beer on the wall".

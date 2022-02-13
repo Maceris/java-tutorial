@@ -93,6 +93,62 @@ public class LoopsTest {
 	}
 
 	/**
+	 * Test the max method.
+	 */
+	@Test
+	public void testMax() {
+		// Equal values
+		Assert.assertEquals(-55, Loops.max(-55, -55));
+		Assert.assertEquals(0, Loops.max(0, 0));
+		Assert.assertEquals(9999, Loops.max(9999, 9999));
+		// Negative and zero
+		Assert.assertEquals(0, Loops.max(0, -22));
+		Assert.assertEquals(0, Loops.max(-22, 0));
+		// All negatives
+		Assert.assertEquals(-55, Loops.max(-55, -998));
+		Assert.assertEquals(-55, Loops.max(-999, -55));
+		// Positive and zero
+		Assert.assertEquals(754, Loops.max(754, 0));
+		Assert.assertEquals(754, Loops.max(0, 754));
+		// Positive and negative
+		Assert.assertEquals(1, Loops.max(1, -1));
+		Assert.assertEquals(1, Loops.max(-1, 1));
+		// All positives
+		Assert.assertEquals(9999, Loops.max(9999, 4));
+		Assert.assertEquals(9999, Loops.max(4, 9999));
+		// Equal values
+		Assert.assertEquals(-55, Loops.max(-55, -55, -55));
+		Assert.assertEquals(0, Loops.max(0, 0, 0));
+		Assert.assertEquals(9999, Loops.max(9999, 9999, 9999));
+		// Negative and zero
+		Assert.assertEquals(0, Loops.max(0, -22, -1234));
+		Assert.assertEquals(0, Loops.max(-22, 0, -555));
+		Assert.assertEquals(0, Loops.max(-22, -694, 0));
+		// All negatives
+		Assert.assertEquals(-55, Loops.max(-55, -998, -78));
+		Assert.assertEquals(-55, Loops.max(-999, -55, -888888));
+		Assert.assertEquals(-55, Loops.max(-999, -555, -55));
+		// Positive and zero
+		Assert.assertEquals(754, Loops.max(754, 0, 0));
+		Assert.assertEquals(754, Loops.max(0, 754, 0));
+		Assert.assertEquals(754, Loops.max(0, 0, 754));
+		// Positive and negative
+		Assert.assertEquals(1, Loops.max(1, -1, -48));
+		Assert.assertEquals(1, Loops.max(-1, 1, -78));
+		Assert.assertEquals(1, Loops.max(-1, -881, 1));
+		// All positives
+		Assert.assertEquals(9999, Loops.max(9999, 4, 5));
+		Assert.assertEquals(9999, Loops.max(4, 9999, 1));
+		Assert.assertEquals(9999, Loops.max(8888, 9998, 9999));
+
+		Assert.assertEquals(9999, Loops.max(1, 2, 9999, 5, 9923, 0, -124, 0));
+
+		// edge cases
+		Assert.assertEquals(0, Loops.max());
+		Assert.assertEquals(-1, Loops.max(-1));
+	}
+
+	/**
 	 * Test the 99 bottles of beer method.
 	 */
 	@Test
