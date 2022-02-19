@@ -77,7 +77,7 @@ public class Loops {
 	 * Take one down and pass it around, 0 bottles of beer on the wall.
 	 * </p>
 	 */
-	public static void ninteyNineBottles() {
+	public static void nintyNineBottles() {
 		// TODO fill this out
 	}
 
