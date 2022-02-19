@@ -59,26 +59,22 @@ public class Loops {
 	 *
 	 * <p>
 	 * It starts with the lyric "99 bottles of beer on the wall, 99 bottles of
-	 * beer.", followed by "Take one down and pass it around, 99 bottles of beer
+	 * beer.", followed by "Take one down and pass it around, 98 bottles of beer
 	 * on the wall." From here, the number decreases and you do it again, until
-	 * you get to 1 bottle of beer. Finally, it ends with the lines "No more
-	 * bottles of beer on the wall, no more bottles of beer." and "Go to the
-	 * store and buy some more, 99 bottles of beer on the wall."
+	 * you get to 0 bottles of beer.
 	 * </p>
 	 * <p>
 	 * The full lyrics would be like:<br>
 	 *
 	 * 99 bottles of beer on the wall, 99 bottles of beer.<br>
-	 * Take one down and pass it around, 99 bottles of beer on the wall.<br>
-	 * 98 bottles of beer on the wall, 98 bottles of beer.<br>
 	 * Take one down and pass it around, 98 bottles of beer on the wall.<br>
+	 * 98 bottles of beer on the wall, 98 bottles of beer.<br>
+	 * Take one down and pass it around, 97 bottles of beer on the wall.<br>
 	 * ...<br>
 	 * 2 bottles of beer on the wall, 2 bottles of beer.<br>
-	 * Take one down and pass it around, 2 bottles of beer on the wall.<br>
-	 * 1 bottle of beer on the wall, 1 bottle of beer.<br>
 	 * Take one down and pass it around, 1 bottle of beer on the wall.<br>
-	 * No more bottles of beer on the wall, no more bottles of beer.<br>
-	 * Go to the store and buy some more, 99 bottles of beer on the wall.
+	 * 1 bottle of beer on the wall, 1 bottle of beer.<br>
+	 * Take one down and pass it around, 0 bottles of beer on the wall.
 	 * </p>
 	 */
 	public static void ninteyNineBottles() {
